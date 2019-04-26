@@ -1,14 +1,16 @@
-package br.com.heiderlopes.blocodenotas.view.formulario
+package br.com.freeleft.agenda.view.formulario
 
 import android.app.Activity
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import br.com.heiderlopes.blocodenotas.R
-import br.com.heiderlopes.blocodenotas.model.ResponseStatus
+import br.com.freeleft.agenda.R
+import br.com.freeleft.agenda.model.ResponseStatus
 import kotlinx.android.synthetic.main.activity_formulario.*
 import kotlinx.android.synthetic.main.loading.*
 
@@ -24,9 +26,13 @@ class FormularioActivity : AppCompatActivity() {
             .get(FormularioViewModel::class.java)
 
         btSalvar.setOnClickListener {
+            val inputManager: InputMethodManager =getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputManager.hideSoftInputFromWindow(currentFocus.windowToken, InputMethodManager.SHOW_FORCED)
             formularioViewModel.salvar(
-                inputTitulo.editText?.text.toString(),
-                inputDescricao.editText?.text.toString()
+                inputNome.editText?.text.toString(),
+                inputTelefone.editText?.text.toString(),
+                inputEmail.editText?.text.toString()
+
             )
         }
 

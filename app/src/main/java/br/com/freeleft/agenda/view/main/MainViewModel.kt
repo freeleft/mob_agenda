@@ -1,25 +1,25 @@
-package br.com.heiderlopes.blocodenotas.view.main
+package br.com.freeleft.agenda.view.main
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import br.com.heiderlopes.blocodenotas.model.Nota
-import br.com.heiderlopes.blocodenotas.repository.NotaRepository
+import br.com.freeleft.agenda.model.Contato
+import br.com.freeleft.agenda.repository.ContatoRepository
 
 class MainViewModel : ViewModel() {
 
-    val notaRepository = NotaRepository()
+    val contatoRepository = ContatoRepository()
 
-    val notas : MutableLiveData<List<Nota>> = MutableLiveData()
+    val contatos : MutableLiveData<List<Contato>> = MutableLiveData()
     val mensagemErro : MutableLiveData<String> = MutableLiveData()
     val isLoading: MutableLiveData<Boolean> = MutableLiveData()
 
 
     fun buscarTodos () {
         isLoading.value = true
-        notaRepository.buscarTodos(
+        contatoRepository.buscarTodos(
             onComplete = {
                 isLoading.value = false
-                notas.value = it
+                contatos.value = it
 
             },
             onError = {

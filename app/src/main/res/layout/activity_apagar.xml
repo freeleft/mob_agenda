@@ -5,7 +5,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="br.com.freeleft.agenda.view.formulario.FormularioActivity">
+        tools:context="br.com.freeleft.agenda.view.apagar.ApagarActivity">
 
     <LinearLayout
             android:padding="16dp"
@@ -19,7 +19,7 @@
                 android:id="@+id/inputNome">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Nome"/>
+                      android:hint="Nome" android:enabled="false"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -28,7 +28,7 @@
                 android:id="@+id/inputTelefone">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Telefone"/>
+                      android:hint="Telefone" android:enabled="false"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -37,12 +37,12 @@
                 android:id="@+id/inputEmail">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Email"/>
+                      android:hint="Email" android:enabled="false"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Salvar"
+                android:text="Confirmar Exclusão"
                 android:id="@+id/btSalvar"/>
     </LinearLayout>
 

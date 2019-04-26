@@ -1,4 +1,4 @@
-package br.com.heiderlopes.blocodenotas.api
+package br.com.freeleft.agenda.api
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -11,7 +11,7 @@ class RetrofitAPI<T> {
 
     fun getClient(c: Class<T>) : T {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://blocodenotasmeunome.herokuapp.com/")
+            .baseUrl("https://api-teste-agenda.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
             .client(getOkhttpClient())
             .build()
@@ -26,6 +26,7 @@ fun getOkhttpClient(): OkHttpClient {
         .build()
 }
 
-fun getNotaAPI(): NotaAPI {
-    return RetrofitAPI<NotaAPI>().getClient(NotaAPI::class.java)
+fun getAgendaAPI(): AgendaAPI {
+    return RetrofitAPI<AgendaAPI>()
+        .getClient(AgendaAPI::class.java)
 }

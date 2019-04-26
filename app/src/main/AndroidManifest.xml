@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="br.com.heiderlopes.blocodenotas">
+          package="br.com.freeleft.agenda">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-            android:name=".MyApplication"
+            android:name="br.com.freeleft.agenda.MyApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".view.formulario.FormularioActivity">
+        <activity android:name="br.com.freeleft.agenda.view.formulario.FormularioActivity">
         </activity>
+        <activity android:name="br.com.freeleft.agenda.view.apagar.ApagarActivity">
+        </activity>
+        <activity android:name="br.com.freeleft.agenda.view.editar.EditarActivity">
+    </activity>
         <activity
-                android:name=".view.main.MainActivity"
+                android:name="br.com.freeleft.agenda.view.main.MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

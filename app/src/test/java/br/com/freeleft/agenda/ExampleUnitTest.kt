@@ -1,4 +1,4 @@
-package br.com.heiderlopes.blocodenotas
+package br.com.freeleft.agenda
 
 import org.junit.Test
 

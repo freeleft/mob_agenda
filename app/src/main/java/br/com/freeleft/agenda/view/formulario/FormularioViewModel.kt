@@ -1,30 +1,31 @@
-package br.com.heiderlopes.blocodenotas.view.formulario
+package br.com.freeleft.agenda.view.formulario
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import br.com.heiderlopes.blocodenotas.model.Nota
-import br.com.heiderlopes.blocodenotas.model.ResponseStatus
-import br.com.heiderlopes.blocodenotas.repository.NotaRepository
+import br.com.freeleft.agenda.model.Contato
+import br.com.freeleft.agenda.model.ResponseStatus
+import br.com.freeleft.agenda.repository.ContatoRepository
 
 class FormularioViewModel : ViewModel() {
 
-    val notaRepository = NotaRepository()
+    val contatoRepository = ContatoRepository()
     val responseStatus: MutableLiveData<ResponseStatus> = MutableLiveData()
 
     val isLoading: MutableLiveData<Boolean> = MutableLiveData()
 
     fun salvar(
-        titulo: String,
-        descricao: String
+        nome: String,
+        telefone: String,
+        email: String
     ) {
         isLoading.value = true
-        val nota = Nota(titulo = titulo, descricao = descricao)
-        notaRepository.salvar(nota,
+        val contato = Contato(nome = nome, telefone = telefone, email = email)
+        contatoRepository.salvar(contato,
             onComplete = {
                 isLoading.value = false
                 responseStatus.value = ResponseStatus(
                     true,
-                    "Dado gravado com sucesso"
+                    "Dados inseridos com sucesso"
                 )
             }, onError = {
                 isLoading.value = false

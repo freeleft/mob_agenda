@@ -1,4 +1,4 @@
-package br.com.heiderlopes.blocodenotas
+package br.com.freeleft.agenda
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("br.com.heiderlopes.blocodenotas", appContext.packageName)
+        assertEquals("br.com.freeleft.agenda", appContext.packageName)
     }
 }

@@ -1,5 +1,5 @@
 # Agenda de Contatos
-App criado na aula de Mobile EES UFSCAR 2019.
+App criado para aula de Mobile EES UFSCAR 2019.
 Integrantes: Mário, Otávio e Thiago.
 
 ## Tela inicial

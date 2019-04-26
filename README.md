@@ -1,7 +1,7 @@
 # Agenda de Contatos
 - App criado para aula de Mobile EES UFSCAR 2019.
 - Feito por: Mario, Otávio e Thiago.
-- Esse app consumi a API https://github.com/freeleft/api_agenda feito para aula de node.js
+- Esse app consume a API https://github.com/freeleft/api_agenda feito para aula de node.js que foi hospedada para teste em https://www.heroku.com/
 - Esse app teve como base https://github.com/heiderlopes/BlocodeNotasUFSCAR do professor Heider Lopes.
 
 ## Tela inicial

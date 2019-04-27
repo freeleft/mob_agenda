@@ -3,7 +3,7 @@
 - Feito por: Mario, Otávio e Thiago
 - Esse APP consume a API https://github.com/freeleft/api_agenda feito para aula de node.js 
 - A API foi hospedada para testes em https://www.heroku.com/
-- Foi utilizado o https://github.com/kitek/android-rv-swipe-delete para fazer eclusão do item
+- Foi utilizado o https://github.com/kitek/android-rv-swipe-delete para fazer exclusão do item
 - Esse app teve como base https://github.com/heiderlopes/BlocodeNotasUFSCAR do professor Heider Lopes
 
 <br>
